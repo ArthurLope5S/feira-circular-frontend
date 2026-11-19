@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Esta é a primeira tela: nela a pessoa escolhe se vai usar o site como feirante, consumidor ou ONG. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Início — Feira Circular</title>
+
+  <!-- O manifesto informa ao navegador como instalar o site como aplicativo. -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Este CSS cuida do fundo, dos cartões de perfil e do rodapé do index. -->
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body class="tela-selecao">
+  <div class="container">
+    <!-- A logo centraliza a marca acima das opções de perfil. -->
+    <div class="logo-container">
+      <img src="IMG/LogoSemFundo.png" alt="Logotipo do projeto Feira Circular" class="logo-grande">
+    </div>
+
+    <!-- Este cabeçalho explica que a pessoa deve selecionar um perfil. -->
+    <div class="page-header">
+      <h1>Quem é você na feira?</h1>
+      <p>Escolha o seu perfil para acessar as ferramentas certas.</p>
+    </div>
+
+    <!-- Cada cartão salva o perfil escolhido e abre a página inicial correspondente. -->
+    <div class="grid-perfis">
+      <div class="card-perfil" onclick="selecionarPerfil('feirante')">
+        <div class="icone">
+          <img src="IMG/icone-feirante.png" alt="Ícone de feirante">
+        </div>
+        <h2>Feirante</h2>
+        <p>Quero anunciar meus excedentes, vender com desconto e acompanhar meu painel de perdas.</p>
+        <button type="button" class="btn btn--primary" aria-label="Acessar o site como feirante">Entrar como Feirante</button>
+      </div>
+
+      <div class="card-perfil" onclick="selecionarPerfil('cliente')">
+        <div class="icone">
+          <img src="IMG/icone-consumidor.png" alt="Ícone de consumidor">
+        </div>
+        <h2>Consumidor</h2>
+        <p>Quero encontrar alimentos frescos e bons com preços acessíveis perto de mim.</p>
+        <button type="button" class="btn btn--primary" aria-label="Acessar o site como consumidor">Entrar como Consumidor</button>
+      </div>
+
+      <div class="card-perfil" onclick="selecionarPerfil('ong')">
+        <div class="icone">
+          <img src="IMG/icone-ong.png" alt="Ícone de ONG">
+        </div>
+        <h2>Organização Social</h2>
+        <p>Represento uma ONG e quero solicitar doações de alimentos para ajudar a comunidade.</p>
+        <button type="button" class="btn btn--primary" aria-label="Acessar o site como organização social">Entrar como ONG</button>
+      </div>
+    </div>
+
+    <!-- Estes links ficam no rodapé e abrem cada conteúdo em uma nova aba. -->
+    <footer class="site-footer">
+      <span>Conheça o projeto:</span>
+      <nav aria-label="Informações do projeto">
+        <a href="sobre.html" target="_blank" rel="noopener noreferrer">Sobre</a>
+        <a href="integrantes.html" target="_blank" rel="noopener noreferrer">Equipe</a>
+        <a href="contato.html" target="_blank" rel="noopener noreferrer">Contato</a>
+      </nav>
+    </footer>
+  </div>
+
+  <!-- Este script guarda o perfil selecionado e abre a página inicial. -->
+  <script src="JS/script.js"></script>
+  <!-- Este script sorteia a posição das imagens decorativas no fundo. -->
+  <script src="JS/fundo-aleatorio.js"></script>
+</body>
+</html>
